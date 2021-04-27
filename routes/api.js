@@ -52,7 +52,7 @@ module.exports = function (app, db) {
 						if (err) {
 							throw err;
 						} else {
-							res.json(doc.ops[0]);
+							res.json({title: doc.ops[0].title, _id: doc.ops[0]._id});
 						}
 					}
 				);
