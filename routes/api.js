@@ -10,14 +10,13 @@
 const ObjectId = require("mongodb").ObjectID;
 
 module.exports = function (app, db) {
-	const isEmpty = (value) => {
+	const isEmpty = (value) =>
 		value === undefined ||
 			value === null ||
 			(typeof value === "object" &&
 				Object.keys(value).length === 0) ||
 			(typeof value === "string" &&
 				value.trim().length === 0);
-	};
 
 	app
 		.route("/api/books")
