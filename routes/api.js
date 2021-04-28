@@ -109,10 +109,10 @@ module.exports = function (app, db) {
 					},
 					{ returnOriginal: false },
 					(err, doc) => {
-						if (err) {
-							res.send("no book exists");
-						} else {
+						if (!err && doc.value) {
 							res.json(doc.value);
+						} else {
+							res.send("no book exists");
 						}
 					}
 				);
