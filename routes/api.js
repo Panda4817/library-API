@@ -128,7 +128,6 @@ module.exports = function (app, db) {
 				db.findOneAndDelete({
 					_id: new ObjectId(bookid),
 				}).then((deletedDocument) => {
-					console.log(deletedDocument)
 					if (deletedDocument.value) {
 						res.send("delete successful");
 					} else {
