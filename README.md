@@ -6,5 +6,7 @@ A freecodecamp project for the quality assurance certificate. A library API impl
 ## Usage on local machine
 
 - Add `NODE_ENV=test` to `.env`
-- run `npm start` to run all 10 functional tests
+- Add `DB=<your database connection variable>` to `.env`
+- Add `PORT=8080` to `.env`
+- run `npm install && npm start` to run all 10 functional tests and start node server
 - Open `localhost:8080` on browser to see frontend
