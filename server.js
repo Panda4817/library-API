@@ -21,11 +21,6 @@ app.use(cors({ origin: "*" })); //USED FOR FCC TESTING PURPOSES ONLY!
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-//Index page (static HTML)
-app.route("/").get(function (req, res) {
-	res.sendFile(process.cwd() + "/views/index.html");
-});
-
 //For FCC testing purposes
 fccTestingRoutes(app);
 

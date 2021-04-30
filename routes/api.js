@@ -12,11 +12,16 @@ const ObjectId = require("mongodb").ObjectID;
 module.exports = function (app, db) {
 	const isEmpty = (value) =>
 		value === undefined ||
-			value === null ||
-			(typeof value === "object" &&
-				Object.keys(value).length === 0) ||
-			(typeof value === "string" &&
-				value.trim().length === 0);
+		value === null ||
+		(typeof value === "object" &&
+			Object.keys(value).length === 0) ||
+		(typeof value === "string" &&
+			value.trim().length === 0);
+
+	//Index page (static HTML)
+	app.route("/").get(function (req, res) {
+		res.sendFile(process.cwd() + "/views/index.html");
+	});
 
 	app
 		.route("/api/books")
@@ -51,7 +56,10 @@ module.exports = function (app, db) {
 						if (err) {
 							throw err;
 						} else {
-							res.json({title: doc.ops[0].title, _id: doc.ops[0]._id});
+							res.json({
+								title: doc.ops[0].title,
+								_id: doc.ops[0]._id,
+							});
 						}
 					}
 				);
