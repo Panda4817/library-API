@@ -104,12 +104,12 @@
 			</h1>
 			<h2 class="col-12 text-center">Test API responses</h2>
 		</header>
-		<div class="row justify-content-around">
-			<div class="row">
+		<div class="row justify-content-center">
+			<div class="col">
 				<form
 					action="/api/books"
 					method="post"
-					class="border col-10"
+					class="border"
 				>
 					<h4>Test POST to /api/books</h4>
 					<div class="form-group">
@@ -131,12 +131,12 @@
 				</form>
 			</div>
 
-			<div class="row">
+			<div class="col">
 				<form
 					action=""
 					method="post"
 					id="commentTest"
-					class="border col-10"
+					class="border"
 				>
 					<h4>Test POST to /api/books/{bookid}</h4>
 					<div class="form-group">
@@ -172,10 +172,10 @@
 				</form>
 			</div>
 
-			<div class="row">
+			<div class="col">
 				<form
 					id="getBooksform"
-					class="border col-10"
+					class="border"
 					action="/api/books"
 					method="get"
 				>
@@ -191,12 +191,12 @@
 				</form>
 			</div>
 
-			<div class="row">
+			<div class="col">
 				<form
 					action=""
 					method="get"
 					id="getbook"
-					class="border col-10"
+					class="border"
 				>
 					<h4>Test GET to /api/books/{bookid}</h4>
 					<div class="form-group">
@@ -220,12 +220,12 @@
 				</form>
 			</div>
 
-			<div class="row">
+			<div class="col">
 				<form
 					action=""
 					method="delete"
 					id="deletebook"
-					class="border col-10"
+					class="border"
 					onsubmit="delete_book();"
 				>
 					<h4>Test DELETE on /api/books/{bookid}</h4>
@@ -249,12 +249,12 @@
 				</form>
 			</div>
 
-			<div class="row">
+			<div class="col">
 				<form
 					action=""
 					method="delete"
 					id="deleteBooksform"
-					class="border col-10"
+					class="border"
 					onsubmit="delete_all_books();"
 				>
 					<h4>Test Delete on /api/books/</h4>
